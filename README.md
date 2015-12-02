@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/krombox/FormAutoTranslationBundle.svg?branch=master)](https://travis-ci.org/krombox/FormAutoTranslationBundle)
 # FormAutoTranslationBundle
 
 Add a possibility to autotranslate form fields on button click. New form type: ``krombox_auto_translations``.
