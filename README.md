@@ -5,8 +5,9 @@ Add a possibility to autotranslate form fields on button click. New form type: `
 
 ## Requirements
 
-- Symfony 2.2
-- [KnpLabs/DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors)
+- PHP <=5.4
+- Symfony 2.3
+- [KnpLabs/DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors)(auto installed from composer)
 - [A2lixTranslationFormBundle](https://github.com/a2lix/TranslationFormBundle)(auto installed from composer)
 - [MicrosoftTranslatorBundle](https://github.com/matthiasnoback/MicrosoftTranslatorBundle) (auto installed from composer)
 
@@ -31,7 +32,10 @@ Register the bundle in ``/app/AppKernel.php``:
         {
             $bundles = array(
                 // ...
-                new Krombox\FormAutoTranslationBundle\KromboxFormAutoTranslationBundle()
+                new Krombox\FormAutoTranslationBundle\KromboxFormAutoTranslationBundle(),
+                new A2lix\TranslationFormBundle\A2lixTranslationFormBundle(),
+                new Knp\DoctrineBehaviors\Bundle\DoctrineBehaviorsBundle(),
+                new MatthiasNoback\MicrosoftTranslatorBundle\MatthiasNobackMicrosoftTranslatorBundle()
             );
         }
     }

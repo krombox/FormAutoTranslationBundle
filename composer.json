@@ -20,7 +20,7 @@
         "twig/extensions": "~1.0",
         "a2lix/translation-form-bundle": "^2.0",
         "knplabs/doctrine-behaviors": "^1.2",        
-        "matthiasnoback/microsoft-translator-bundle": "dev-master" 
+        "matthiasnoback/microsoft-translator-bundle": "~0.2" 
     },
      "require-dev": {
         "symfony/framework-bundle": "~2.3", 
