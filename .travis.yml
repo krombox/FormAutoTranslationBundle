@@ -19,10 +19,11 @@ matrix:
 
 before_script:
   - composer self-update
-  before_install:
+before_install:
   - if [ "$SYMFONY_VERSION" != "" ]; then composer require --dev --no-update symfony/symfony=$SYMFONY_VERSION; fi
   
 install:
   - composer install
 
-script: "phpunit --coverage-text" 
+script: "phpunit --coverage-text"
+
