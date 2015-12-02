@@ -85,6 +85,12 @@ Include javascripts template and init autotranslate plugin:
             });
         </script>
     {% endblock %}
+
+Use Bootsrap form theme on *.html.twig template for nice look(not necessary):
+
+    {% form_theme form 
+        'bootstrap_3_layout.html.twig'
+    %}
     
 ##Usage
 
