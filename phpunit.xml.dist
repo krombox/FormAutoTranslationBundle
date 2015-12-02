@@ -8,7 +8,7 @@
     bootstrap="./Tests/app/autoload.php"
 >
     <testsuites>
-        <testsuite name="Test Suite">
+        <testsuite name="Krombox FormAutoTranslationBundle Suite">
             <directory>./Tests/</directory>
         </testsuite>
     </testsuites>
