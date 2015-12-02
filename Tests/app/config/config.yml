@@ -1,0 +1,46 @@
+parameters:
+    locale: en
+
+framework:
+    #esi:             ~
+    translator:      { fallbacks: ["%locale%"] }
+    secret:          "secret"
+    test: ~
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form: ~    
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"    
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver: pdo_mysql
+        host: 127.0.0.1
+        port: ~
+        dbname: kromboxautotranform
+        user: travis
+        password: ~
+        charset: UTF8
+    
+a2lix_translation_form:
+    locale_provider: default       # [1]
+    locales: [ru, en, fr, uk]          # [1-a]
+    default_locale: ru             # [1-b]
+    required_locales: [ru, en]         # [1-c]
+    manager_registry: doctrine      # [2]
+    templating: "A2lixTranslationFormBundle::default.html.twig"      # [3]
+    
+matthias_noback_microsoft_translator:
+    oauth:
+        client_id: "[client_id]"
+        client_secret: "[client_secret]"    
+
+krombox_form_auto_translation:
+    auto_translated_locales: [ru, en, fr, uk]
+    locale_provider: default
+    templating: "KromboxFormAutoTranslationBundle::default.html.twig"

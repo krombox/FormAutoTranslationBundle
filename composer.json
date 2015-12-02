@@ -1,0 +1,31 @@
+{
+    "name": "krombox/form-auto-translation-bundle",
+    "type": "symfony-bundle",
+    "description": "Bundle for autotranslate form fields",
+    "keywords": ["autotranslate"],
+    "homepage": "https://github.com/krombox/FormAutoTranslationBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roman Kapustian",
+            "email": "ikrombox@gmail.com"            
+        }
+    ],
+    "require": {
+        "php": ">=5.4",        
+        "doctrine/orm": "~2.4",
+        "doctrine/doctrine-bundle": "~1.4",        
+        "symfony/monolog-bundle": "~2.4",                        
+        "a2lix/translation-form-bundle": "^2.0",
+        "knplabs/doctrine-behaviors": "^1.2",        
+        "matthiasnoback/microsoft-translator-bundle": "dev-master" 
+    },
+     "require-dev": {
+        "symfony/framework-bundle": "~2.3", 
+        "phpunit/phpunit": "~4.3"
+    },
+    "autoload": {
+        "psr-0" : { "Krombox\\FormAutoTranslationBundle" : "" }
+    },
+    "target-dir": "Krombox/FormAutoTranslationBundle"
+}

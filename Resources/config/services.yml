@@ -1,0 +1,18 @@
+services:
+    krombox_form_auto_translation.listener.auto_translations:
+        class: Krombox\FormAutoTranslationBundle\Form\EventListener\AutoTranslationsListener
+        arguments:
+            ["@a2lix_translation_form.default.service.translation"]
+#        tags:
+#            - { name: doctrine.event_listener }
+
+    krombox.form.type.auto_translations:
+        class: Krombox\FormAutoTranslationBundle\Form\Type\AutoTranslationsType
+        arguments:
+            - "@krombox_form_auto_translation.listener.auto_translations"
+            - "@krombox_form_auto_translation.default.service.parameter_locale_provider"
+        tags:
+            - { name: form.type, alias: krombox_auto_translations }
+            
+    krombox_form_auto_translation.default.service.parameter_locale_provider:
+        class: Krombox\FormAutoTranslationBundle\Locale\AutoLocaleProvider           

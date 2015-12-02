@@ -1,0 +1,2 @@
+krombox_form_auto_translation:
+    resource: "@KromboxFormAutoTranslationBundle/Resources/config/routing.yml"   

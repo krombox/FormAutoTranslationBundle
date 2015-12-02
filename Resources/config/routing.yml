@@ -1,0 +1,3 @@
+krombox_form_auto_translation_translate:
+    path:     /autotranslate
+    defaults: { _controller: KromboxFormAutoTranslationBundle:AutoTranslation:translate }
